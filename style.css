@@ -153,6 +153,11 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+.return{
+    position:absolute;
+    top: 0%;
+    color:white
+}
 .win{
     position:absolute;
     display: none;
