@@ -1,0 +1,173 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Creepster', cursive;
+}
+.button {
+    display: block;
+    width: 115px;
+    height: 25px;
+    margin: 0 auto;
+    background: #ff8800;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+button {
+    display: block;
+
+    margin: 0 auto;
+    background: #ff8800;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.lab {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.potion1 {
+    position: absolute;
+    width:5vw;
+    height:10vh;
+}
+.potion2 {
+    position: absolute;
+    width:5vw;
+    height:10vh;
+    left: 25%;
+    top: 50%;
+}
+.potion3 {
+    position: absolute;
+    width:5vw;
+    height:10vh;
+    left: 35%;
+    top: 50%;
+}
+.potion4 {
+    position: absolute;
+    width:5vw;
+    height:10vh;
+    left: 40%;
+    top: 50%;
+}
+.ghost {
+    position: absolute;
+    width:5vw;
+    height:10vh;
+    left: 0%;
+    top: 0%;
+}
+.potion5 {
+    position: absolute;
+    width:5vw;
+    height:10vh;
+    left: 60%;
+    top: 50%;
+}
+.potion6 {
+    position: absolute;
+    width:5vw;
+    height:10vh;
+    left: 55%;
+    top: 50%;
+}
+.judge {
+    position: absolute;
+    width:5vw;
+    height:10vh;
+    left: 68%;
+    top: 40%;
+}
+.boba {
+    position: absolute;
+    width:2vw;
+    height:10vh;
+    right: 30%;
+    top: 50%;
+}
+.liquid {
+    position: absolute;
+    width:2vw;
+    height:7vh;
+    right: 30%;
+    top: 54%;
+}
+#ball {
+    position: absolute;
+    width:2vw;
+    height:2vh;
+    right: 30%;
+    top: 58%;
+}
+
+#eye {
+    position: absolute;
+
+    width:2vw;
+    height:2vh;
+    right: 30%;
+    top: 58%;
+}
+.popup {
+    position:absolute;
+    background-color: #000000;
+    z-index: 1;
+    width: 50vw;
+    height: 50vh;
+}
+.ingredient {
+    position:absolute;
+    background-color: #000000;
+    z-index: 1;
+    width: 50vw;
+    height: 50vh;
+}
+.close-btn {
+    position: absolute;
+    top: 0;
+
+    right: 0;
+    background-color: #ff8800;
+    color: white;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.win{
+    position:absolute;
+    display: none;
+    background-color: #000000;
+    z-index: 1;
+    width: 50vw;
+    height: 50vh;
+}
+.lose{
+    position:absolute;
+    display: none;
+
+    background-color: #000000;
+    z-index: 1;
+    width: 50vw;
+    height: 50vh;
+}
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');

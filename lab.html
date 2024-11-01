@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Welcome to the Lab!</h2>
+            <p>Click on potions to experiement with different ingredients</p>
+            <p></p>
+        </div>
+    </div>
+
+  
+   <div id="ingredient1" class="ingredient">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Black Tea!</h2>
+        <p>Delicious black tea, steeped for the perfect 8 minutes</p>
+        <p></p>
+        <button class="add-btn" onclick = "addIngredient(2)" id = "1a">Add Ingredient</button>
+        <button class="remove-btn" id = "1b" style="display: none;" onclick="removeIngredient(2)">Remove Ingredient</button>
+    
+    </div>
+</div>
+   <div id="ingredient2" class="ingredient">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Sugar</h2>
+        <p>who doesn't like sweets?</p>
+        <p></p>
+        <button class="add-btn" id = "2a" onclick = "addIngredient(3)">Add Ingredient</button>
+        <button class="remove-btn" id = "2b" style="display: none;" onclick="removeIngredient(3)">Remove Ingredient</button>
+    </div>
+</div>
+</div>
+<div id="ingredient3" class="ingredient">
+ <div class="popup-content">
+     <span class="close-btn">&times;</span>
+     <h2>Blood</h2>
+     <p>yummmmmyyyy</p>
+     <p> -probably a vampire</p>
+     <p></p>
+     <button class="add-btn" id = "3a" onclick = "addIngredient(5)">Add Ingredient</button>
+     <button class="remove-btn" id = "3b" style="display: none;" onclick="removeIngredient(5)">Remove Ingredient</button>
+ </div>
+</div>
+<div id="ingredient4" class="ingredient">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Boba Pearls</h2>
+        <p>shiny and chewy!</p>
+        <p></p>
+        <p></p>
+        <button class="add-btn" id = "4a" onclick = "addIngredient(0)">Add Ingredient</button>
+        <button class="remove-btn" id = "4b" style="display: none;" onclick="removeIngredient(0)">Remove Ingredient</button>
+    </div>
+   </div>
+   <div id="ingredient5" class="ingredient">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Milk</h2>
+        <p>from a cow</p>
+        <p></p>
+        <p></p>
+        <button class="add-btn" id="5a" onclick = "addIngredient(1)">Add Ingredient</button>
+        <button class="remove-btn" id="5b" style="display: none;" onclick="removeIngredient(1)">Remove Ingredient</button>
+    </div>
+   </div>
+   <div id="ingredient6" class="ingredient">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Eyes</h2>
+        <p>chewy...</p>
+        <p></p>
+        <p></p>
+        <button class="add-btn" id = "6a" onclick = "addIngredient(4)">Add Ingredient</button>
+        <button class="remove-btn" id = "6b" style="display: none;" onclick="removeIngredient(4)">Remove Ingredient</button>
+    </div>
+   </div>
+   <div id="win" class="win">
+    <div class="popup-content">
+        <h2>YUMMMMMMM</h2>
+        <p>Tommy the ghost loves your boba!</p>
+        <p></p>
+        <p></p>
+   
+    </div>
+   </div>
+   <div id="lose" class="lose">
+    <div class="popup-content">
+        <h2>bleh</h2>
+        <p>thats not a very good boba...</p>
+        <p>try again!</p>
+        <p></p>
+
+    </div>
+   </div>
+  <img class="lab" src="assets/labs.jpg"">
+  <img class="potion1" src="assets/potion1.gif" onclick="ingredient(1)">
+  <img class="potion2" src="assets/potion2.gif" onclick="ingredient(2)">
+  <img class="potion3" src="assets/potion3.gif" onclick="ingredient(3)">
+  <img class="potion4" src="assets/potion4.gif" onclick="ingredient(4)">
+  <img class="potion5" src="assets/potion5.gif" onclick="ingredient(5)">
+  <img class="potion6" src="assets/potion6.gif" onclick="ingredient(6)">
+
+  <img class="boba" src="assets/emptyboba.png">
+  <img class="liquid" id = "liquid" src="assets/liquid.png">
+  <img class="ghost" id = "ghost" src="assets/ghost.png">
+
+    <img class="judge" id = "judge" onclick = "judge()" src="assets/judge.png">
+  <img class="hidden" id = "ball" src="assets/boba.png" >
+  <img class="hidden" id = "eye" src="assets/eyeballs.png" >
+
+
+  <script>
+    window.onload = function() {
+        var popup = document.getElementById("popup");
+        var closeBtns = document.querySelectorAll(".close-btn");
+        var ingredients = document.querySelectorAll(".ingredient");
+        var hideimg = document.querySelectorAll(".hidden");
+        
+        popup.style.display = "block";
+        ingredients.forEach(function(ingredient) {
+            ingredient.style.display = "none";
+        });
+
+        hideimg.forEach(function(img) {
+            img.style.display = "none";
+        });
+
+        closeBtns.forEach(function(closeBtn) {
+            closeBtn.addEventListener("click", function() {
+                popup.style.display = "none";
+                ingredients.forEach(function(ingredient) {
+                    ingredient.style.display = "none";
+                });
+            });
+        });
+        closeBtn.onclick = function() {
+            popup.style.display = "none";
+            ingredient.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+                ingredient.style.display = "none";
+            }
+        }
+    }
+    function ingredient(num){
+        var ingredient = document.getElementById("ingredient" + num);
+  
+        ingredient.style.display = "block";
+
+    }
+</script>
+<script>
+    add = document.querySelectorAll('.add-btn')
+    remove = document.querySelectorAll('.remove-btn')
+    add.forEach(function(add) {
+        add.addEventListener('click', function() {
+            id = this.id;
+            id = id.substring(0, id.length - 1);
+            console.log("Trying to access ID:", id + 'b');
+
+            document.getElementById(id + 'b').style.display = 'inline';
+            this.style.display = 'none';
+        });
+    });
+    remove.forEach(function(remove) {
+        remove.addEventListener('click', function() {
+            id = this.id;
+            id = id.substring(0, id.length - 1);
+
+            document.getElementById(id + 'a').style.display = 'inline';
+            this.style.display = 'none';
+        });
+    });
+
+
+ 
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
